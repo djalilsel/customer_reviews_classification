@@ -1,27 +1,50 @@
+<div align="center">
+
 # 💬 Customer Review Sentiment Classifier
 
-A Natural Language Processing (NLP) project that classifies customer reviews as **Positive (Happy)** or **Negative (Unhappy)** using machine-learning techniques.
+### *Automated sentiment analysis using Natural Language Processing and Machine Learning*
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-name.streamlit.app)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+**Classify customer reviews as Positive 😊 or Negative 😞 with machine learning**
+
+</div>
 
 ---
 
-## 🧠 Overview
-This project takes raw customer review text, cleans and preprocesses it, then trains a machine-learning model to automatically detect sentiment.  
-It’s built as a practical application of **supervised machine learning**, combining text cleaning, feature extraction (TF-IDF), and logistic regression classification.
+## 📖 Overview
+
+This project demonstrates end-to-end **Natural Language Processing (NLP)** for sentiment classification:
+
+🔹 **Data Cleaning** – Preprocesses raw customer review text  
+🔹 **Feature Extraction** – Converts text to numerical features using TF-IDF  
+🔹 **Model Training** – Trains a Logistic Regression classifier  
+🔹 **Deployment** – Interactive web app built with Streamlit  
+
+Built as a practical application of **supervised machine learning** for real-world customer feedback analysis.
 
 ---
 
 ## 📊 Dataset
-- **Source:** [Amazon Fine Food Reviews on Kaggle](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews)
-- **Size:** ~500,000 reviews
-- **Features used:**
-  - `Text` → the raw customer review
-  - `Score` → original 1–5 rating converted into binary sentiment:
-    - 4–5 → Positive (1)
-    - 1–2 → Negative (0)
-    - 3 → Neutral (removed)
-- **After Cleaning:** ~400k reviews remain  
-  - Short reviews (<20 chars) and overly long ones (>2000 chars) were removed.  
-  - Roughly **80% positive** and **20% negative** balance was preserved.
+
+| Attribute | Details |
+|-----------|---------|
+| **Source** | [Amazon Fine Food Reviews (Kaggle)](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) |
+| **Original Size** | ~500,000 reviews |
+| **After Cleaning** | ~400,000 reviews |
+| **Class Distribution** | 80% Positive 😊 / 20% Negative 😞 |
+
+### Features Used
+- **Text** – Raw customer review content
+- **Score** – Original 1-5 star rating converted to binary sentiment:
+  - ⭐⭐⭐⭐ / ⭐⭐⭐⭐ (3-5) → **Positive (1)**
+  - ⭐ / ⭐⭐ (1-2) → **Negative (0)**
+
+### Data Filtering
+- Removed reviews shorter than **20 characters** (insufficient context)
+- Removed reviews longer than **2000 characters** (outliers)
 
 ---
 
@@ -70,12 +93,96 @@ Balancing or weighting classes improves the model’s ability to identify *unhap
 ### Results
 ![Results](images/results.png)
 
-### Sentiment Distribution
+### 📊 Sentiment Distribution
 ![Sentiment Distribution](images/sentiment_distribution.png)
 
 ---
 
 ## 🌐 Streamlit Web App
 
-The model is deployed as a simple **Streamlit** web app that allows users to paste a review and get an instant prediction (Positive or Negative).
-**[Live Demo](https://your-app-name.streamlit.app)**
+<div align="center">
+
+### 🚀 Try it Live!
+
+The model is deployed as an **interactive web application** built with Streamlit.
+
+**Features:**
+- 📝 Paste any customer review
+- ⚡ Get instant sentiment prediction
+- 📊 View confidence scores
+- 🎨 Clean, intuitive interface
+
+</div>
+
+---
+
+## 🛠️ Technologies Used
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+
+---
+
+## 📂 Project Structure
+
+```
+customer_reviews_classification/
+│
+├── data/
+│   ├── Reviews.csv              # Raw dataset from Kaggle
+│   └── clean_reviews.csv        # Cleaned and preprocessed data
+│
+├── notebooks/
+│   ├── 01_data_cleaning.ipynb           # Data preprocessing pipeline
+│   └── 02_vectorization_and_model.ipynb # Model training & evaluation
+│
+├── images/
+│   ├── results.png
+│   └── sentiment_distribution.png
+│
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+```bash
+Python 3.8+
+pip
+```
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/djalilsel/customer_reviews_classification.git
+cd customer_reviews_classification
+```
+
+2. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Download the dataset**
+- Visit [Kaggle - Amazon Fine Food Reviews](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews)
+- Download `Reviews.csv` and place it in the `data/` folder
+
+- Start with `01_data_cleaning.ipynb`
+- Then run `02_vectorization_and_model.ipynb`
+
+---
+
+## 👤 Author
+
+**Djalil**
+
+- GitHub: [@djalilsel](https://github.com/djalilsel)
+- LinkedIn: [@abdeldjalilselamnia](https://www.linkedin.com/in/abdeldjalilselamnia/)
