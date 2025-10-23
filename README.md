@@ -78,4 +78,4 @@ Balancing or weighting classes improves the model’s ability to identify *unhap
 ## 🌐 Streamlit Web App
 
 The model is deployed as a simple **Streamlit** web app that allows users to paste a review and get an instant prediction (Positive or Negative).
-**[Live Demo](https://your-app-name.streamlit.app)**
+**[Live Demo](https://customer-reviews-classification.streamlit.app)**
